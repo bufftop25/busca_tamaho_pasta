@@ -1,10 +1,8 @@
 #!/bin/bash
-wget -O /home/deploy/atualiza_public.sh https://raw.githubusercontent.com/FilipeCamillo/busca_tamaho_pasta/main/busca_tamaho_pasta.sh
+wget -O /home/deploy/atualiza_public.sh https://raw.githubusercontent.com/iadsantos/busca_tamaho_pasta/main/busca_tamaho_pasta.sh
 # Carregar variáveis de ambiente do arquivo .env
-source "/home/deploy/multi100/backend/.env"
-
 # Caminho para a pasta public
-PUBLIC_FOLDER="/home/deploy/multi100/backend/public"
+PUBLIC_FOLDER="/home/deploy/workzap/backend/public"
 
 # Testar a conexão com o banco de dados
 if PGPASSWORD="$DB_PASS" psql -h "$DB_HOST" -p "$DB_PORT" -U "$DB_USER" -d "$DB_NAME" -c "SELECT 1" >/dev/null; then
