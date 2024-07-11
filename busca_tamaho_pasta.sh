@@ -1,5 +1,5 @@
 #!/bin/bash
-wget -O /home/deploy/atualiza_public.sh https://raw.githubusercontent.com/iadsantos/busca_tamaho_pasta/main/busca_tamaho_pasta.sh
+wget -O /home/deploy/atualiza_public.sh https://raw.githubusercontent.com/bufftop25/busca_tamaho_pasta/main/busca_tamaho_pasta.sh
 # Carregar variáveis de ambiente do arquivo .env
 # Caminho para a pasta public
 PUBLIC_FOLDER="/home/deploy/workzap/backend/public"
