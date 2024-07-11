@@ -1,10 +1,10 @@
 #!/bin/bash
 wget -O /home/deploy/atualiza_public.sh https://raw.githubusercontent.com/bufftop25/busca_tamaho_pasta/main/busca_tamaho_pasta.sh
 # Carregar variáveis de ambiente do arquivo .env
-source "/home/deploy/workzap/backend/.env"
+source "/home/deploy/${empresa}/backend/.env"
 
 # Caminho para a pasta public
-PUBLIC_FOLDER="/home/deploy/workzap/backend/public"
+PUBLIC_FOLDER="/home/deploy/${empresa}/backend/public"
 
 # Testar a conexão com o banco de dados
 if PGPASSWORD="$DB_PASS" psql -h "$DB_HOST" -p "$DB_PORT" -U "$DB_USER" -d "$DB_NAME" -c "SELECT 1" >/dev/null; then
